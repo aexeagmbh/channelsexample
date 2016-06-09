@@ -1,0 +1,16 @@
+[
+    {
+            "model": "main.Project",
+            "pk": 1,
+            "fields": {
+                "name": "Django"
+            }
+    },
+    {
+            "model": "main.Project",
+            "pk": 2,
+            "fields": {
+                "name": "Channels"
+            }
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+            "model": "main.Asset",
+            "pk": 1,
+            "fields": {
+                "name": "Monday",
+                "project": 1
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 2,
+            "fields": {
+                "name": "Tuesday",
+                "project": 2
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 3,
+            "fields": {
+                "name": "Wednesday",
+                "project": 1
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 4,
+            "fields": {
+                "name": "Thursday",
+                "project": 2
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 5,
+            "fields": {
+                "name": "Friday",
+                "project": 1
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 6,
+            "fields": {
+                "name": "Saturday",
+                "project": 2
+            }
+    },
+    {
+            "model": "main.Asset",
+            "pk": 7,
+            "fields": {
+                "name": "Sunday",
+                "project": 1
+            }
+    }
+]

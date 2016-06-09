@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    entrypoint:
+      - './manage.py'
+    command: 'runserver 0.0.0.0:8042'
+    environment:
+        PYTHONUNBUFFERED: 0
+        DJANGO_SETTINGS_MODULE: channelsexample.settings
+    volumes:
+      - .:/opt/code
+    ports:
+      - '8042:8042'
+    depends_on:
+      - db
+      - redis
+  wsserver:
+    build: .
+    entrypoint:
+      - 'daphne'
+    command: 'channelsexample.asgi:channel_layer -p 9999 -v2 -b 0.0.0.0'
+    environment:
+      PYTHONUNBUFFERED: 0
+      DJANGO_SETTINGS_MODULE: channelsexample.settings
+    volumes:
+      - .:/opt/code
+    ports:
+      - '9999:9999'
+    depends_on:
+      - db
+      - redis
+  db:
+    image: postgres:9.5
+  redis:
+    image: redis:3
